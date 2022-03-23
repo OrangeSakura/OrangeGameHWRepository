@@ -1,4 +1,4 @@
-# OrangeGameHWRepository
+# GameHWRepository
 
 I4A60何品儀
 
