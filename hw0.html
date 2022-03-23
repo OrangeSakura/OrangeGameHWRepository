@@ -32,6 +32,8 @@ var clock;
 var renderer, scene, camera;
 var cube;
 var radius = 16;
+var radius1 = 17;
+var radius2 = 15;
 var angle = 0;  // initialization IMPORTANT!
 var turn = false;
 // make angle & turn 'static'
@@ -40,6 +42,9 @@ init();
 animate();
 maketrain();
 makeTrack();
+makeTrack1();
+makeTrack2();
+
 
 $("#toggle").click(function() {
   turn = !turn;
@@ -79,7 +84,9 @@ function init () {
 	train = maketrain();
 	scene.add (train);
 	
-	scene.add (makeTrack());
+	
+    scene.add (makeTrack1());
+    scene.add (makeTrack2());
 }
 
 function maketrain(){
@@ -123,6 +130,32 @@ function makeTrack(){
 	var line = new THREE.Line (geom, new THREE.LineBasicMaterial({color:0xff0000}));
 	return line;
 }
+function makeTrack1(){
+	var points = [];
+	var theta = 0;
+	for (var i = 0 ; i < 100 ; i++){
+		theta = i*Math.PI*2/100;
+		var point = new THREE.Vector3(radius1*Math.cos(theta), 0, radius1*Math.sin(theta));
+		points.push(point);
+	}
+	var geom = new THREE.BufferGeometry ().setFromPoints (points);
+	var line = new THREE.Line (geom, new THREE.LineBasicMaterial({color:0xff0000}));
+	return line;
+}
+
+function makeTrack2(){
+	var points = [];
+	var theta = 0;
+	for (var i = 0 ; i < 100 ; i++){
+		theta = i*Math.PI*2/100;
+		var point = new THREE.Vector3(radius2*Math.cos(theta), 0, radius2*Math.sin(theta));
+		points.push(point);
+	}
+	var geom = new THREE.BufferGeometry ().setFromPoints (points);
+	var line = new THREE.Line (geom, new THREE.LineBasicMaterial({color:0xff0000}));
+	return line;
+}
+
 
 function onWindowResize() {
   
