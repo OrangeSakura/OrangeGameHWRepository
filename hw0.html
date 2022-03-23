@@ -306,13 +306,26 @@ var boxGeometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
 function maketrain(){
 	var train = new THREE.Group();
 
+
 	var cubeGeometry = new THREE.BoxGeometry (2,1.5,4);
 	var cubeMaterial = new THREE.MeshNormalMaterial();
 	cube = new THREE.Mesh (cubeGeometry, cubeMaterial);
+	var cubeGeometry2 = new THREE.BoxGeometry (1,1,2);
+	var cubeMaterial2 = new THREE.MeshNormalMaterial();
+	cube2 = new THREE.Mesh (cubeGeometry2, cubeMaterial2);
+	cube2.position.x = 0;
+	cube2.position.y = 1;
+	cube2.position.z = 0;
+	    var cubeGeometry1 = new THREE.BoxGeometry (1,1,1.5);
+	var cubeMaterial1 = new THREE.MeshNormalMaterial();
+	cube1 = new THREE.Mesh (cubeGeometry1, cubeMaterial1);
+	cube1.position.z = -2;
+	
 
-	head = new THREE.Mesh (new THREE.CylinderGeometry(0.5,0.5,2,10), new THREE.MeshNormalMaterial());
-	head.position.y = 0.3;
-	head.position.z = -1;
+	head = new THREE.Mesh (new THREE.CylinderGeometry(0.2,0.2,1,30), new THREE.MeshNormalMaterial());
+	head.position.x = 0;
+	head.position.y = 1;
+	head.position.z = -2.3;
 
 	front_wheel = new THREE.Mesh (new THREE.CylinderGeometry(0.5,0.5,2.7,50), new THREE.MeshNormalMaterial());
 	front_wheel.position.y = -0.25;
@@ -328,7 +341,7 @@ function maketrain(){
 	rear_wheel.position.z = 1.2;
 	rear_wheel.rotation.z = Math.PI/2;
 
-	train.add(cube, head, front_wheel, wheel, rear_wheel);
+	train.add(cube,cube1,cube2, head, front_wheel, wheel, rear_wheel);
 	return train;
 }
 
