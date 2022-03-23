@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<div id='info'> Game in Three.JS <br> 
+<div id='info'> Train <br> 
 <button id="toggle" style="width:20%">Toggle Turn</button>
 </div>
 <script src="https://threejs.org/build/three.min.js"></script>
@@ -80,15 +80,94 @@ function init () {
 	let controls = new THREE.OrbitControls(camera, renderer.domElement);
 	
 	window.addEventListener('resize', onWindowResize, false);
-	///////////////////////////////////////////////////////////////
+	
+	
+	trackmm = box();
 	train = maketrain();
+	scene.add (trackmm);
 	scene.add (train);
 	
 	
     scene.add (makeTrack1());
     scene.add (makeTrack2());
 }
+function box(){
 
+var boxGeometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var boxMaterial = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box = new THREE.Mesh (boxGeometry, boxMaterial);
+	box.position.set(16,0,0);
+
+
+    var box3Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box3Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box3 = new THREE.Mesh (box3Geometry, box3Material);
+	box3.position.set(-16,0,0);
+
+	var box4Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box4Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box4 = new THREE.Mesh (box4Geometry, box4Material);
+	box4.rotation.y = Math.PI/6;
+	box4.position.set(16*Math.sin(Math.PI*4/6),0,16*Math.cos(Math.PI*4/6));
+
+	var box5Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box5Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box5 = new THREE.Mesh (box5Geometry, box5Material);
+	box5.rotation.y = Math.PI/3;
+	box5.position.set(16*Math.sin(Math.PI*5/6),0,16*Math.cos(Math.PI*5/6));
+
+	var box6Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box6Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box6 = new THREE.Mesh (box6Geometry, box6Material);
+	box6.rotation.y = Math.PI/2;
+	box6.position.set(16*Math.sin(Math.PI),0,16*Math.cos(Math.PI));
+                 
+	var box7Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box7Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box7 = new THREE.Mesh (box7Geometry, box7Material);
+	box7.rotation.y = -Math.PI/6;
+	box7.position.set(16*Math.sin(Math.PI*-4/6),0,16*Math.cos(Math.PI*-4/6));
+
+	var box8Geometry = new THREE.BoxGeometry(2, 0.1, 0.1 );
+	var box8Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box8 = new THREE.Mesh (box8Geometry, box8Material);
+	box8.rotation.y = -Math.PI/3;
+	box8.position.set(16*Math.sin(Math.PI*-5/6),0,16*Math.cos(Math.PI*-5/6));
+
+	var box9Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box9Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box9 = new THREE.Mesh (box9Geometry, box9Material);
+	box9.rotation.y = Math.PI/3;
+	box9.position.set(16*Math.cos(Math.PI*4/6),0,16*Math.sin(Math.PI*4/6));
+
+	var box10Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box10Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box10 = new THREE.Mesh (box10Geometry, box10Material);
+	box10.rotation.y = Math.PI/6;
+	box10.position.set(16*Math.cos(Math.PI*5/6),0,16*Math.sin(Math.PI*5/6));
+
+	var box11Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box11Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box11 = new THREE.Mesh (box11Geometry, box11Material);
+	box11.rotation.y = Math.PI/2;
+	box11.position.set(16*Math.cos(Math.PI*3/6),0,16*Math.sin(Math.PI*3/6));
+
+	var box12Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box12Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box12 = new THREE.Mesh (box12Geometry, box12Material);
+	box12.rotation.y = -Math.PI/3;
+	box12.position.set(16*Math.cos(Math.PI*2/6),0,16*Math.sin(Math.PI*2/6));
+
+
+	var box13Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1);
+	var box13Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box13 = new THREE.Mesh (box13Geometry, box13Material);
+	box13.rotation.y = -Math.PI/6;
+	box13.position.set(16*Math.cos(Math.PI*1/6),0,16*Math.sin(Math.PI*1/6));
+    
+	scene.add (box,box3,box4,box5,box6,box7,box8,box9,box10,box11,box12,box13);
+
+}
 function maketrain(){
 	var train = new THREE.Group();
 
@@ -139,7 +218,7 @@ function makeTrack1(){
 		points.push(point);
 	}
 	var geom = new THREE.BufferGeometry ().setFromPoints (points);
-	var line = new THREE.Line (geom, new THREE.LineBasicMaterial({color:0xff0000}));
+	var line = new THREE.Line (geom, new THREE.LineBasicMaterial({color:0x000000}));
 	return line;
 }
 
@@ -152,7 +231,7 @@ function makeTrack2(){
 		points.push(point);
 	}
 	var geom = new THREE.BufferGeometry ().setFromPoints (points);
-	var line = new THREE.Line (geom, new THREE.LineBasicMaterial({color:0xff0000}));
+	var line = new THREE.Line (geom, new THREE.LineBasicMaterial({color:0x000000}));
 	return line;
 }
 
