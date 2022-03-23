@@ -98,65 +98,187 @@ var boxGeometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
 	var box = new THREE.Mesh (boxGeometry, boxMaterial);
 	box.position.set(16,0,0);
 
+	var box34Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box34Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box34 = new THREE.Mesh (box34Geometry, box34Material);
+	box34.rotation.y = Math.PI/1;
+	box34.position.set(16*Math.cos(Math.PI*1/18),0,16*Math.sin(Math.PI*1/18));
+    var box35Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box35Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box35 = new THREE.Mesh (box35Geometry, box35Material);
+	box35.rotation.y = Math.PI/1.1;
+	box35.position.set(16*Math.cos(Math.PI*2/18),0,16*Math.sin(Math.PI*2/18));
 
     var box3Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
 	var box3Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
 	var box3 = new THREE.Mesh (box3Geometry, box3Material);
 	box3.position.set(-16,0,0);
+	
+	var box36Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box36Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box36= new THREE.Mesh (box36Geometry, box36Material);
+	box36.rotation.y = Math.PI/1;
+	box36.position.set(-16*Math.cos(Math.PI*1/18),0,-16*Math.sin(Math.PI*1/18));
+    var box37Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box37Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box37 = new THREE.Mesh (box37Geometry, box37Material);
+	box37.rotation.y = Math.PI/1.1;
+	box37.position.set(-16*Math.cos(Math.PI*2/18),0,-16*Math.sin(Math.PI*2/18));
 
 	var box4Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
 	var box4Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
 	var box4 = new THREE.Mesh (box4Geometry, box4Material);
 	box4.rotation.y = Math.PI/6;
 	box4.position.set(16*Math.sin(Math.PI*4/6),0,16*Math.cos(Math.PI*4/6));
+	
+	var box14Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box14Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box14 = new THREE.Mesh (box4Geometry, box4Material);
+	box14.rotation.y = Math.PI/4;
+	box14.position.set(16*Math.sin(Math.PI*13/18),0,16*Math.cos(Math.PI*13/18));
+    var box15Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box15Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box15 = new THREE.Mesh (box4Geometry, box4Material);
+	box15.rotation.y = Math.PI/4;
+	box15.position.set(16*Math.sin(Math.PI*14/18),0,16*Math.cos(Math.PI*14/18));
 
 	var box5Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
 	var box5Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
 	var box5 = new THREE.Mesh (box5Geometry, box5Material);
 	box5.rotation.y = Math.PI/3;
 	box5.position.set(16*Math.sin(Math.PI*5/6),0,16*Math.cos(Math.PI*5/6));
+	
+	
+	var box16Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box16Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box16 = new THREE.Mesh (box4Geometry, box4Material);
+	box16.rotation.y = Math.PI/2.5;
+	box16.position.set(16*Math.sin(Math.PI*16/18),0,16*Math.cos(Math.PI*16/18));
+    var box17Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box17Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box17 = new THREE.Mesh (box4Geometry, box4Material);
+	box17.rotation.y = Math.PI/2.3;
+	box17.position.set(16*Math.sin(Math.PI*17/18),0,16*Math.cos(Math.PI*17/18));
+
+	
 
 	var box6Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
 	var box6Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
 	var box6 = new THREE.Mesh (box6Geometry, box6Material);
 	box6.rotation.y = Math.PI/2;
 	box6.position.set(16*Math.sin(Math.PI),0,16*Math.cos(Math.PI));
+	
+	var box18Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box18Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box18 = new THREE.Mesh (box4Geometry, box4Material);
+	box18.rotation.y = Math.PI/16;
+	box18.position.set(16*Math.sin(Math.PI*10/18),0,16*Math.cos(Math.PI*10/18));
+    var box19Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box19Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box19 = new THREE.Mesh (box4Geometry, box4Material);
+	box19.rotation.y = Math.PI/9;
+	box19.position.set(16*Math.sin(Math.PI*11/18),0,16*Math.cos(Math.PI*11/18));
                  
 	var box7Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
 	var box7Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
 	var box7 = new THREE.Mesh (box7Geometry, box7Material);
 	box7.rotation.y = -Math.PI/6;
 	box7.position.set(16*Math.sin(Math.PI*-4/6),0,16*Math.cos(Math.PI*-4/6));
+	var box20Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box20Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box20 = new THREE.Mesh (box4Geometry, box4Material);
+	box20.rotation.y = -Math.PI/4;
+	box20.position.set(16*Math.sin(Math.PI*-13/18),0,16*Math.cos(Math.PI*-13/18));
+    var box21Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box21Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box21 = new THREE.Mesh (box4Geometry, box4Material);
+	box21.rotation.y = -Math.PI/4;
+	box21.position.set(16*Math.sin(Math.PI*-14/18),0,16*Math.cos(Math.PI*-14/18));
 
 	var box8Geometry = new THREE.BoxGeometry(2, 0.1, 0.1 );
 	var box8Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
 	var box8 = new THREE.Mesh (box8Geometry, box8Material);
 	box8.rotation.y = -Math.PI/3;
 	box8.position.set(16*Math.sin(Math.PI*-5/6),0,16*Math.cos(Math.PI*-5/6));
+	
+	var box22Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box22Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box22 = new THREE.Mesh (box4Geometry, box4Material);
+	box22.rotation.y = -Math.PI/2.5;
+	box22.position.set(16*Math.sin(Math.PI*-16/18),0,16*Math.cos(Math.PI*-16/18));
+    var box23Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box23Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box23 = new THREE.Mesh (box4Geometry, box4Material);
+	box23.rotation.y = -Math.PI/2.3;
+	box23.position.set(16*Math.sin(Math.PI*-17/18),0,16*Math.cos(Math.PI*-17/18));
 
 	var box9Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
 	var box9Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
 	var box9 = new THREE.Mesh (box9Geometry, box9Material);
 	box9.rotation.y = Math.PI/3;
 	box9.position.set(16*Math.cos(Math.PI*4/6),0,16*Math.sin(Math.PI*4/6));
+	
+	var box24Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box24Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box24 = new THREE.Mesh (box4Geometry, box4Material);
+	box24.rotation.y = Math.PI/4;
+	box24.position.set(16*Math.cos(Math.PI*13/18),0,16*Math.sin(Math.PI*13/18));
+    var box25Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box25Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box25 = new THREE.Mesh (box4Geometry, box4Material);
+	box25.rotation.y = Math.PI/4;
+	box25.position.set(16*Math.cos(Math.PI*14/18),0,16*Math.sin(Math.PI*14/18));
 
 	var box10Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
 	var box10Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
 	var box10 = new THREE.Mesh (box10Geometry, box10Material);
 	box10.rotation.y = Math.PI/6;
 	box10.position.set(16*Math.cos(Math.PI*5/6),0,16*Math.sin(Math.PI*5/6));
+	
+	var box26Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box26Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box26 = new THREE.Mesh (box4Geometry, box4Material);
+	box26.rotation.y = Math.PI/9;
+	box26.position.set(16*Math.cos(Math.PI*16/18),0,16*Math.sin(Math.PI*16/18));
+    var box27Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box27Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box27 = new THREE.Mesh (box4Geometry, box4Material);
+	box27.rotation.y = Math.PI/16;
+	box27.position.set(16*Math.cos(Math.PI*17/18),0,16*Math.sin(Math.PI*17/18));
 
 	var box11Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
 	var box11Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
 	var box11 = new THREE.Mesh (box11Geometry, box11Material);
 	box11.rotation.y = Math.PI/2;
 	box11.position.set(16*Math.cos(Math.PI*3/6),0,16*Math.sin(Math.PI*3/6));
+	
+	var box28Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box28Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box28 = new THREE.Mesh (box4Geometry, box4Material);
+	box28.rotation.y = Math.PI/2.3;
+	box28.position.set(16*Math.cos(Math.PI*10/18),0,16*Math.sin(Math.PI*10/18));
+    var box29Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box29Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box29 = new THREE.Mesh (box4Geometry, box4Material);
+	box29.rotation.y = Math.PI/2.5;
+	box29.position.set(16*Math.cos(Math.PI*11/18),0,16*Math.sin(Math.PI*11/18));
 
 	var box12Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
 	var box12Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
 	var box12 = new THREE.Mesh (box12Geometry, box12Material);
 	box12.rotation.y = -Math.PI/3;
 	box12.position.set(16*Math.cos(Math.PI*2/6),0,16*Math.sin(Math.PI*2/6));
+	
+	var box30Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box30Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box30 = new THREE.Mesh (box4Geometry, box4Material);
+	box30.rotation.y = -Math.PI/2.5;
+	box30.position.set(16*Math.cos(Math.PI*7/18),0,16*Math.sin(Math.PI*7/18));
+    var box31Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box31Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box31 = new THREE.Mesh (box4Geometry, box4Material);
+	box31.rotation.y = -Math.PI/2.3;
+	box31.position.set(16*Math.cos(Math.PI*8/18),0,16*Math.sin(Math.PI*8/18));
 
 
 	var box13Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1);
@@ -164,8 +286,21 @@ var boxGeometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
 	var box13 = new THREE.Mesh (box13Geometry, box13Material);
 	box13.rotation.y = -Math.PI/6;
 	box13.position.set(16*Math.cos(Math.PI*1/6),0,16*Math.sin(Math.PI*1/6));
+	
+	var box32Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box32Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box32 = new THREE.Mesh (box4Geometry, box4Material);
+	box32.rotation.y = -Math.PI/4;
+	box32.position.set(16*Math.cos(Math.PI*4/18),0,16*Math.sin(Math.PI*4/18));
+    var box33Geometry = new THREE.BoxGeometry( 2, 0.1, 0.1 );
+	var box33Material = new THREE.MeshBasicMaterial({color: 0x000000}); 
+	var box33 = new THREE.Mesh (box4Geometry, box4Material);
+	box33.rotation.y = -Math.PI/4;
+	box33.position.set(16*Math.cos(Math.PI*5/18),0,16*Math.sin(Math.PI*5/18));
     
-	scene.add (box,box3,box4,box5,box6,box7,box8,box9,box10,box11,box12,box13);
+	scene.add (box,box3,box4,box5,box6,box7,box8,box9,box10,box11,box12,box13,box14,box15,box16,box17
+	           ,box18,box19,box20,box21,box22,box23,box24,box25,box26,box27,box28,box29
+			   ,box30,box31,box32,box33,box34,box35,box36,box37);
 
 }
 function maketrain(){
